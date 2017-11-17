@@ -1,5 +1,6 @@
 // TODO Grab the request package...
 // @link https://www.npmjs.com/package/request
+var request = require("request")
 
 // Run the request function...
 // The request function takes in a URL then returns three arguments:
