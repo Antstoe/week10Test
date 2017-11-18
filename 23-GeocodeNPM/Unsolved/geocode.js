@@ -1,27 +1,24 @@
-// Instructions: 
-// Build a Node application that takes in a location input via the command line, then geocodes it using the geocoder NPM package.
-// Then console.log the geocoding information for display.
 
-// Easier: User will provide the city and state in the following format: "Atlanta, GA", "Houston, TX"
-// Slightly More Challenging: User will provide the address in any format: "151 Sip Ave Jersey City, NJ", "Austin, TX", etc.
+var index = require("./index")
+console.log(index);
+index.nameChanger("ryan")
 
-// All: Be sure to console log the output using JSON.stringify in "pretty-print" format. 
+var express = require('express')
+var cors = require('cors')
+var bodyParser = require('body-parser')
+var app = express()
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
+app.use(cors())
 
-// ========================================================================================================================
+app.get('/', function (req, res) {
+    res.send('hello world')
+})
+app.post('/api/res', function (req, res, next) {
+    console.log(req.body)
+    res.json({ msg: 'This is CORS-enabled for all origins!' })
+})
 
-// Include the geocoder NPM package (Remember to run "npm install geocoder"!)
-
-
-
-
-// Take in the command line arguments
-
-
-
-
-// Build your address as an array or string
-
-
-
-
-// Then use Geocoder NPM to geocode the address
+app.listen(3000, function(){
+    console.log("hi runninf on port 3000");
+})
