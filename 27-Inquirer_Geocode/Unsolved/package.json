@@ -1,14 +1,15 @@
 {
-  "name": "inquirerintro",
+  "name": "unsolved",
   "version": "1.0.0",
-  "description": "Basic example of using inquirer",
-  "main": "basic.js",
+  "description": "",
+  "main": "inquirerGeocode.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^1.2.3"
+    "geocoder": "^0.2.3",
+    "inquirer": "^4.0.0"
   }
 }
